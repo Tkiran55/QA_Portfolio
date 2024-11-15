@@ -1,203 +1,254 @@
-:root { 
-  --primarycolor: #005b96;
-  --darkprimary: #011f4b;
-  --lightprimary: #8fc6ec;
-  --mediumdark: #03396c;
-  --mediumlight: #6497b1;
+:root {
+  --primary-color: #005b96;
+  --dark-primary: #011f4b;
+  --light-primary: #8fc6ec;
+  --medium-dark: #03396c;
+  --medium-light: #6497b1;
   --white: #ffffff;
+  --font-family: "Montserrat", sans-serif;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-family);
 }
 
 body {
-  font-optical-sizing: auto;
+  background-color: var(--white);
+  color: var(--dark-primary);
+  line-height: 1.6;
 }
 
-.navbar {
-  background-color: var(--mediumdark);
+header.navbar {
+  background-color: var(--medium-dark);
   color: var(--white);
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  align-items: center;
+  padding: 15px 20px;
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 15px;
 }
 
 .navbar a {
   text-decoration: none;
-  font-weight: bold;
   color: var(--white);
-  padding: 10px;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s;
 }
 
 .navbar a:hover {
-  color: var(--lightprimary);
-}
-
-.btn-secondary {
-  background-color: var(--darkprimary);
-  color: var(--white);
-  border-radius: 30px;
-  margin-top: 20px;
-  font-size: 16px;
-  padding: 10px;
-}
-
-.btn-secondary:hover {
-  background-color: var(--mediumlight);
-  /* color: var(--white); */
-}
-
-.intro {
-  background: linear-gradient(to bottom, var(--mediumlight), var(--white));
-  padding: 150px 0;
-}
-
-.intro-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 50px;
+  color: var(--light-primary);
 }
 
 section {
-  padding-top: 80px; /* Adjust based on the navbar height */
+  padding: 120px 20px 80px; /* Adjust for fixed navbar */
 }
 
-
-img {
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
+.intro {
+  background: linear-gradient(to bottom, var(--medium-light), var(--white));
+  text-align: center;
+  padding: 150px 20px;
 }
 
-.intro-content {
-  font-weight: bold;
-  font-size: xx-large;
+.intro h1,
+.intro h2 {
+  margin-bottom: 10px;
+}
+
+.intro h1 {
+  color: var(--dark-primary);
+  font-size: 2.5rem;
+}
+
+.intro h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.btn-secondary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: var(--dark-primary);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--medium-light);
 }
 
 .about {
-  padding: 0 100px 100px;
-  /* padding: 0 100px 100px; */
-  padding-top: 80px;
+  text-align: center;
 }
 
 .about-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.about-container p {
-  font-size: 16px;
+.about img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.about p {
+  font-size: 1rem;
   text-align: justify;
-  letter-spacing: 2px;
-  padding-top: 10px;
+  line-height: 1.8;
 }
 
-.skills-container {
-  display: flex;
-  justify-content: space-evenly;
+.about h1 {
+  margin-bottom: 20px;
+  color: var(--dark-primary);
+  font-size: 2.2rem;
 }
 
-.skills h1 {
-  text-align: center;
-  padding: 40px;
+.about .btn-secondary {
+  margin-top: 20px;
 }
 
 .contact {
+  background-color: var(--dark-primary);
+  color: var(--white);
   text-align: center;
-  letter-spacing: 5px;
-  padding: 0 100px 50px 100px;
-  background-color: var(--darkprimary);
+  padding: 60px 20px;
+}
+
+.contact h1 {
+  margin-bottom: 20px;
+  font-size: 2.2rem;
+}
+
+.contact p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.contact a {
+  color: var(--light-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact a:hover {
   color: var(--white);
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  font-size: 30px;
-  padding: 10px;
-  gap: 50px
+  gap: 20px;
+  margin-top: 20px;
+  font-size: 1.5rem;
 }
 
-.social-icons i{
-  color: var(--lightprimary);
+.social-icons a {
+  color: var(--light-primary);
+  transition: color 0.3s ease;
 }
 
-@media only screen and (max-width: 768px) {
-  .intro {
-    text-align: center;
-  }
+.social-icons a:hover {
+  color: var(--white);
+}
 
-  .intro-profile img {
-    display: none;
-  }
+/* Responsive Styles */
 
-  .intro-section {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .about {
-    padding: 0 30px;
-  }
-
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
   .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .about-container {
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-  }
-
-  .navbar a {
-    padding: 5px;
-  }
-
-  img {
-    height: 200px;
-    width: 200px;
   }
 }
 
-@media only screen and (max-width: 480px) {
-  .intro-section {
-    padding: 10px;
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .intro h1 {
+    font-size: 2rem;
   }
 
-  .intro-content {
-    font-size: large;
-  }
-
-  .about h1 {
+  .intro h2 {
     font-size: 1.5rem;
   }
 
-  .about-container p {
-    font-size: 14px;
+  .about img {
+    max-width: 200px;
   }
 
   .btn-secondary {
-    font-size: 14px;
-    padding: 8px;
-    margin-top: 15px;
+    font-size: 0.9rem;
+    padding: 10px 15px;
   }
 
-  .social-icons i {
-    margin: 5px;
-    font-size: 18px;
+  .contact h1 {
+    font-size: 1.8rem;
   }
 
-  img {
-    height: 150px;
-    width: 150px;
+  .contact p {
+    font-size: 0.9rem;
+  }
+
+  .social-icons {
+    font-size: 1.2rem;
+    gap: 15px;
+  }
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .intro {
+    padding: 120px 10px;
+  }
+
+  .about-container {
+    gap: 20px;
+  }
+
+  .contact {
+    padding: 40px 10px;
+  }
+
+  .social-icons {
+    gap: 10px;
+    font-size: 1rem;
   }
 }
