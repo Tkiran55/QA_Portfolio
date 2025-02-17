@@ -1,4 +1,5 @@
 # QA_Portfolio
 
-#Link Below:
-qa-kirantmg.netlify.app
+#Link: 
+
+https://qa-kirantmg.netlify.app/
