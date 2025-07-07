@@ -28,8 +28,15 @@
     <!-- Navbar -->
     <header class="navbar">
       <div class="navbar-logo">Portfolio</div>
-      <nav class="navbar-links">
-        <a href="#">Home</a>
+
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <nav class="navbar-links" id="navbar-links">
+        <!-- <a href="#">Home</a> -->
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
@@ -43,8 +50,7 @@
           <h1>नमस्ते</h1>
           <h1>म किरण तामाङ</h1>
           <h2>Quality Assurance Trainee</h2>
-          
-          <a href="#contact">
+          <a href="#about">
             <button class="btn-secondary">Learn more</button>
           </a>
         </div>
@@ -76,18 +82,16 @@
             opportunities where I can apply my QA skills and continue to grow
             professionally.
           </p>
-          <br>
-          <p style="text-align: center;">
-            <h1>Proficient in:</h1>
-            <ul>
-              <li>Manual Testing</li>
-              <li>Automation Testing (Selenium, TestNG)</li>
-              <li>Bug Tracking and Reporting</li>
-              <li>SQL & Database Testing</li>
-              <li>API Testing (Postman)</li>
-              <li>Agile & Scrum Methodologies</li>
-            </ul>
-          </p>
+          <br />
+          <h1>Proficient in:</h1>
+          <ul>
+            <li>Manual Testing</li>
+            <li>Automation Testing (Selenium, TestNG)</li>
+            <li>Bug Tracking and Reporting</li>
+            <li>SQL & Database Testing</li>
+            <li>API Testing (Postman)</li>
+            <li>Agile & Scrum Methodologies</li>
+          </ul>
           <a
             href="https://drive.google.com/file/d/1wGzdWa16oDhcKreZyW1vRXvuo6JmfL2H/view?usp=drive_link"
             download="Kiran_Tamang_CV.pdf"
@@ -99,22 +103,23 @@
     </section>
 
     <!-- Projects Section -->
-<section class="projects" id="projects">
-  <h1>My Projects</h1>
-  <div class="projects-container">
-    
-    <!-- Project 1 -->
-    <div class="project-card">
-      
-      <h3>sauceDemo Testing</h3>
-      <p>Automated Test for Sauce Demo Website using Selenium and TestNG.</p>
-      <a href="https://github.com/Tkiran55/sauceDemoTest" target="_blank" class="btn-secondary">View Project</a>
-    </div>
-
-    <!-- Project 2 -->
-  </div>
-</section>
-
+    <section class="projects" id="projects">
+      <h1>My Projects</h1>
+      <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-card fade-in">
+          <h3>sauceDemo Testing</h3>
+          <p>Automated Test for Sauce Demo Website using Selenium and TestNG.</p>
+          <a
+            href="https://github.com/Tkiran55/sauceDemoTest"
+            target="_blank"
+            class="btn-secondary"
+            >View Project</a
+          >
+        </div>
+        <!-- Add more projects here -->
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -141,5 +146,11 @@
         ></a>
       </div>
     </section>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" title="Go to top">↑</button>
+
+    <!-- JS -->
+    <script src="scripts/main.js"></script>
   </body>
 </html>
